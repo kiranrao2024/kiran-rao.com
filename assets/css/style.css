@@ -390,19 +390,23 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius);
   padding: 18px;
-  transition: transform 200ms ease, border-color 200ms ease;
+  transition: box-shadow 200ms ease, border 200ms ease, background 200ms ease; /* PROTOTYPE: project hover transition fix */
+  display: flex; /* PROTOTYPE: content update v5 */
+  flex-direction: column; /* PROTOTYPE: content update v5 */
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.15); /* PROTOTYPE: project card accent updated */
 }
 
 .panel:hover {
   transform: translateY(-6px);
-  border-color: rgba(98, 245, 194, 0.35);
+  border-color: rgba(168, 85, 247, 0.35); /* PROTOTYPE: removed green highlight */
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.45); /* PROTOTYPE: project hover intensity updated */
 }
 
 .chips {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 10px;
+  margin-top: auto; /* PROTOTYPE: content update v5 */
 }
 
 .chips span {
@@ -411,6 +415,11 @@ ul {
   padding: 6px 10px;
   color: var(--text);
   font-size: 13px;
+  transition: background-color 200ms ease; /* PROTOTYPE: content update v5 */
+}
+
+.chips span:hover {
+  background: rgba(255, 255, 255, 0.12); /* PROTOTYPE: content update v5 */
 }
 
 .mono {
